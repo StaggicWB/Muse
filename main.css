@@ -14,43 +14,53 @@ html,body {
 }
 
 .name-wrapper {
-  height: 90%;
+  position: relative;
+  height: 100%;
   width: 100%;
-  margin: inherit;
   background-image: url(img/mainbck.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}
-
-.name-wrapper p {
-  position: relative;
-  width: 30%;
-  margin: 0 auto;
-  color: #fff;
-  font-size: 115px;
-  font-weight: bolder;
-  letter-spacing: 30px;
+  background-size: contain;
   text-align: center;
-  text-decoration: none;
-  top: 45%;
-  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 .name-wrapper a {
+  position: relative;
+  top: 90%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-align: center;
   text-decoration: none;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  animation: buttonActiveAppear;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  transition: all;
 }
 
-.name-wrapper h4 {
+@keyframes buttonActiveAppear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.name-wrapper a:hover {
+  transform: scale(1.1);
+}
+
+/*.name-wrapper h4 {
   position: relative;
-  margin: inherit;
   color: #fff;
   text-align: center;
-  top: 45%;
-}
+  top: 50%;
+}*/
 
 .video-wrapper {
   height: 90%;
@@ -80,7 +90,7 @@ html,body {
 
 .cast figure {
   position: relative;
-  display: inline-block;
+  display: inline-table;
   margin: 0 auto;
   width: 300px;
   color: #FFF;
